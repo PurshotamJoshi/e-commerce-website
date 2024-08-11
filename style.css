@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  color: #ffffff;
+  background: #fff;
+}
+
+body {
+  background-color: #ffffff;
+  color: black;
+  line-height: 1.6;
+}
+
+nav {
+  position: top;
+  background: #ffd900;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.menu .logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.menu ul {
+  display: inline-flex;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+  background: black;
+  color: #ffd900;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero {
+  background-size: auto;
+  background-image: url('https://tse3.mm.bing.net/th?id=OIP.nGnyS75y-_wsWSwYmC8OmQHaDt&pid=Api&P=0&h=180');
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  color: #ffffff;
+}
+
+.hero .hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s;
+  color:#fff
+}
+
+.hero .hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s;
+  color:rgb(255, 255, 255)
+}
+
+.hero .btn {
+  background-color: #ff0000;
+  color: rgb(255, 196, 0);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  animation: fadeIn 2s;
+}
+
+.products {
+  padding: 2rem;
+  text-align: center;
+  background-color: #d5ba0a;
+  margin-top: 2rem;
+  color: black;
+}
+
+.products h2 {
+  margin-bottom: 2rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-list .product-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #ffffff;
+  width: 22%;
+  margin-bottom: 2rem;
+  transition: transform 0.3s;
+}
+
+.product-list .product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-list .product-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-list .product-item h3 {
+  margin: 1rem 0;
+}
+
+.about,
+.contact {
+  padding: 2rem;
+  text-align: center;
+  background-color: #d5ba0a;
+  margin-top: 2rem;
+  color: black;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #ffd900;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu ul.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .product-list .product-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-list .product-item {
+    width: 100%;
+  }
+}
+
+#cartSection {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+#company-logo {
+  height: 100px;
+  width: 100px;
+}
